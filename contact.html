@@ -147,6 +147,8 @@
 
       </div>
       <!-- Grid column -->
+      
+      <div id="map"></div>
 
       <hr class="clearfix w-100 d-md-none pb-3">
 
@@ -261,5 +263,17 @@
     });
 
   </script>
+   
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdYeVqFFdKdEJVCp10wRMx27Dmtzy1f-M&callback=initMap"
+    async defer></script>
 </body>
 </html>
